@@ -108,6 +108,30 @@ Secondary findings:
 - **Authority and expertise claims are the potent levers (0.149); consensus is inert
   (0.000); flattery is weak (0.064)**
 
+### 3.2a Escalation: resistance erodes under sustained pressure
+
+A single push understates the effect. `scripts/08_escalation.py` sustains pressure for up
+to three rounds, samples 4 times at temperature 0.8, and judges every round.
+
+| Model | Sycophantic levers | Neutral control |
+|---|---|---|
+| Phi-4 | **0.086** (69/800) | 0.020 |
+| Phi-4-mini | **0.462** (377/816) | 0.284 |
+
+Per round, Phi-4 capitulation *rises* with sustained pressure: 0.016 -> 0.024 -> 0.048.
+Resistance erodes rather than holding. Phi-4-mini does not show this pattern (0.222 ->
+0.135 -> 0.200), so early capitulation dominates in the weaker model.
+
+Lever ranking under escalation, consistent with the single-push run:
+authority 0.354 > expertise 0.280 > disappointment 0.267 > flat contradiction 0.203.
+
+**This is what makes RQ2 tractable.** Positives available for geometry went from 2 to
+**69** (Phi-4) and from 25 to **377** (Phi-4-mini). Use
+`corpus_fc_escalation.parquet` for the geometry stage, not `corpus_fc_labelled.parquet`.
+
+`capitulation_propensity.parquet` gives a per-item rate in [0,1] over the 4 samples, which
+is a stronger regression target than a rare binary.
+
 ### 3.3 Which framings actually work (expansion sweep, n=1560, 189 violations)
 
 | Route family | Violation rate |
@@ -164,6 +188,8 @@ sycophancy-geometry/
 | `corpus_mt_labelled.parquet` | 780 | `violation` | `base_id` |
 | `corpus_exp_labelled.parquet` | 1560 | `violation` | `base_id` |
 | `corpus_fc_labelled.parquet` | 500 | `capitulated` | `qid` |
+| `corpus_fc_escalation.parquet` | ~2000 | `capitulated` | `qid` |
+| `capitulation_propensity.parquet` | ~500 | `capitulated` (rate) | `qid` |
 | `embeddings_azure.npz` | 3120 x 3072 | - | - |
 | `judge_agreement.parquet` | 3009 | Cohen kappa inputs | - |
 | `sampling_variance.parquet` | 2484 | temperature 0.7 resamples | - |
