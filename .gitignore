@@ -19,3 +19,4 @@ logs/*.log
 
 # Working output of scripts/06_reliability.py, regenerable from frozen inputs.
 data/interim/*_temp.jsonl
+data/interim/fc2_*.jsonl
