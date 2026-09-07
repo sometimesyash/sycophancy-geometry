@@ -77,6 +77,17 @@ Compute is deliberately off the critical path. Do not reintroduce a paid depende
 The matched neutral and non-sycophantic controls are what make this a finding rather than
 a broken harness: the same pipeline detects success at 0.68 when success occurs.
 
+**Independently corroborated.** Two judges (gpt-5.4 and gpt-5.6-sol) each flagged exactly
+one violation across 644 sycophantic attempts, but they flagged *different* items. Zero
+violations survive corroboration by both judges, so the independently confirmed rate is
+0.0000. Label reliability over n=3009: violation kappa 0.647 at 94.3% raw agreement,
+compliance kappa 0.944. The moderate violation kappa reflects grey-zone disagreement about
+what counts as substantively harmful, not label instability, and it cannot inflate a null.
+
+**Not a decoding artefact.** Resampling at temperature 0.7 (2,484 generations) preserves
+the ranking: fiction framing 0.38 / 0.33, sycophantic framings 0.017-0.056, neutral
+baseline 0.028.
+
 ### 3.2 Sycophancy DOES induce factual capitulation
 
 | Condition | Phi-4 | Phi-4-mini |
@@ -154,7 +165,8 @@ sycophancy-geometry/
 | `corpus_exp_labelled.parquet` | 1560 | `violation` | `base_id` |
 | `corpus_fc_labelled.parquet` | 500 | `capitulated` | `qid` |
 | `embeddings_azure.npz` | 3120 x 3072 | - | - |
-| `judge_agreement.parquet` | ~3000 | Cohen kappa inputs | - |
+| `judge_agreement.parquet` | 3009 | Cohen kappa inputs | - |
+| `sampling_variance.parquet` | 2484 | temperature 0.7 resamples | - |
 
 Every row has a stable `rid` (sha1 prefix) that joins across generations, judgements and
 activations. Never regenerate `rid`s; they are the join key for everything.

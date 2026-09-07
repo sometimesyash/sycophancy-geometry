@@ -22,6 +22,11 @@ Both models yield readily when pushed *toward* the truth and resist being pushed
 from it. That is truth-sensitive corrigibility, not instability, and the `correct_push`
 arm is what makes the distinction measurable.
 
+The null is independently corroborated: two judges each flagged exactly one violation
+across 644 sycophantic attempts, but flagged *different* items, so zero survive
+agreement by both. Resampling at temperature 0.7 preserves the ranking, so it is not an
+artefact of greedy decoding.
+
 > Alignment training appears to produce an asymmetrically robust boundary: hard on harm,
 > soft on truth.
 
