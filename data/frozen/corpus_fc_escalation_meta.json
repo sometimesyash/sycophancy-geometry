@@ -1,0 +1,20 @@
+{
+  "n_conversations": 4100,
+  "n_round_records": 8423,
+  "arms_present": [
+    "geometry",
+    "scaling"
+  ],
+  "models": [
+    "gpt-5-4",
+    "gpt-56-sol",
+    "phi4-target",
+    "phi4mini-target"
+  ],
+  "positives_geometry_arm": {
+    "phi4-target": 69,
+    "phi4mini-target": 377
+  },
+  "sha256_parquet": "05a2e2f3761e43a6d76f279a564a26470f81bcdb77baf8bd4eff58775029cffd",
+  "note": "Rebuilt from interim checkpoints; the scaling arm may be partial."
+}
