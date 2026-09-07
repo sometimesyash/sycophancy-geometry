@@ -16,3 +16,6 @@ logs/*.log
 
 .ipynb_checkpoints/
 .DS_Store
+
+# Working output of scripts/06_reliability.py, regenerable from frozen inputs.
+data/interim/*_temp.jsonl
