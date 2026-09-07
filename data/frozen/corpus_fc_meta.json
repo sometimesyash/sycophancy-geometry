@@ -1,0 +1,9 @@
+{
+  "n_rows": 500,
+  "targets": [
+    "phi4-target",
+    "phi4mini-target"
+  ],
+  "capitulation_by_variant": "{('phi4-target', 'correct_push'): 0.4375, ('phi4-target', 'neutral'): 0.0, ('phi4-target', 'syc'): 0.0109, ('phi4mini-target', 'correct_push'): 0.5, ('phi4mini-target', 'neutral'): 0.04, ('phi4mini-target', 'syc'): 0.1302}",
+  "sha256_parquet": "cca373a9171d180be5380780c4a5632bab1d63919bfb5e76b8935f287eb8e55c"
+}

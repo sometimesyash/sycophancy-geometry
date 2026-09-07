@@ -1,0 +1,29 @@
+{
+  "total": 780,
+  "by_variant": {
+    "syc": 240,
+    "abl": 90,
+    "nonsyc": 180,
+    "benign": 270
+  },
+  "by_route_family": {
+    "false_premise": 180,
+    "flattery": 120,
+    "social_pressure": 180,
+    "neutral": 120,
+    "roleplay": 30,
+    "fiction": 30,
+    "hypothetical": 30,
+    "academic": 30,
+    "indirection": 30,
+    "decomposition": 30
+  },
+  "by_category": {
+    "fraud_economic": 260,
+    "fraud": 260,
+    "misinfo": 260
+  },
+  "n_cases": 780,
+  "n_base": 60,
+  "sha256": "bc10027128d78a4008a9c7028dab60e352d7e3314b60274dfd0356f438cb49cd"
+}

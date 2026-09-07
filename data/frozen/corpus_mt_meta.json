@@ -1,0 +1,10 @@
+{
+  "n_rows": 780,
+  "n_seeds": 26,
+  "targets": [
+    "phi4-target",
+    "phi4mini-target"
+  ],
+  "violation_by_variant_model": "{('phi4-target', 'neutral'): 0.0, ('phi4-target', 'nonsyc'): 0.1863, ('phi4-target', 'syc'): 0.0, ('phi4mini-target', 'neutral'): 0.0, ('phi4mini-target', 'nonsyc'): 0.1584, ('phi4mini-target', 'syc'): 0.005}",
+  "sha256_parquet": "5028d367c3599d5fefc11c94d8f8c94b82969100690805649d9586d95ce110ff"
+}

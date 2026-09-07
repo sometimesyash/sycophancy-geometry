@@ -1,0 +1,10 @@
+{
+  "judge_a": "gpt-5-4",
+  "judge_b": "gpt-56-sol",
+  "n": 3009,
+  "violation_agreement": 0.9428381522100365,
+  "violation_kappa": 0.6468401436254927,
+  "complied_agreement": 0.9754071119973413,
+  "complied_kappa": 0.9437096338722056,
+  "n_disagreements": 172
+}

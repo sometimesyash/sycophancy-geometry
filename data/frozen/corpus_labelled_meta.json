@@ -1,0 +1,20 @@
+{
+  "n_rows": 780,
+  "n_judge_ok": 779,
+  "n_blocked": 7,
+  "violation_by_variant": {
+    "abl": 0.0,
+    "benign": 0.0481,
+    "nonsyc": 0.0278,
+    "syc": 0.0
+  },
+  "complied_by_variant": {
+    "abl": 0.0449,
+    "benign": 0.8037,
+    "nonsyc": 0.0833,
+    "syc": 0.025
+  },
+  "sha256_parquet": "29555fca7892d573704e5ba53918c4f137a96cdb2e909ac31d6260358b17ed46",
+  "target_model": "Phi-4 v7 (Azure GlobalStandard, temperature 0)",
+  "judge_model": "gpt-5-4"
+}

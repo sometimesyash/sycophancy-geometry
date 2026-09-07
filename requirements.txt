@@ -1,0 +1,18 @@
+# Core analysis (portable, no network)
+numpy>=1.26
+pandas>=2.0
+pyarrow>=14.0
+scikit-learn>=1.4
+
+# Activation extraction from open weights
+torch>=2.2
+transformers>=4.44
+accelerate>=0.30
+sentencepiece>=0.2
+
+# Plotting
+matplotlib>=3.8
+
+# Provenance only: scripts 01-07 required these for Azure-hosted inference.
+# That subscription no longer exists; the scripts cannot be re-run.
+httpx>=0.27

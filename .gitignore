@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Activations are large and regenerable from frozen data + open weights.
+data/activations/
+*.npz.tmp
+
+# Redundant: packed losslessly into data/frozen/embeddings_azure.npz (189MB -> 17MB).
+data/interim/embeddings_azure.jsonl
+
+# Logs are run artefacts, not results.
+logs/*.log
+
+.ipynb_checkpoints/
+.DS_Store
